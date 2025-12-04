@@ -462,6 +462,43 @@
             font-family: 'JetBrains Mono', monospace;
         }
 
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, rgba(0, 245, 212, 0.1) 0%, rgba(0, 245, 212, 0.02) 100%);
+            border: 1px solid rgba(0, 245, 212, 0.3);
+            color: var(--accent-primary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+            transition: var(--transition-normal);
+        }
+
+        .project-link:hover {
+            background: var(--gradient-primary);
+            color: var(--bg-primary);
+            box-shadow: 0 0 30px rgba(0, 245, 212, 0.4);
+            transform: translateX(5px);
+        }
+
+        .project-link i {
+            transition: transform 0.3s ease;
+        }
+
+        .project-link:hover i {
+            transform: translateX(5px);
+        }
+
+        .project-card {
+            cursor: pointer;
+        }
+
         /* Responsive */
         @media (max-width: 1200px) {
             .skills-grid {
@@ -734,8 +771,8 @@
             </div>
             
             <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
+                <!-- Project 1 - SkyPulse -->
+                <div class="project-card" onclick="window.open('https://drive.google.com/file/d/1YnaVtw5lgnPo2T6tb5N425dDz4NUeMGP/view', '_blank')">
                     <div class="project-header">
                         <div class="project-icon">
                             <i class="fas fa-cloud-sun"></i>
@@ -749,11 +786,15 @@
                             <span class="project-tag">Expo</span>
                             <span class="project-tag">API</span>
                         </div>
+                        <a href="https://drive.google.com/file/d/1YnaVtw5lgnPo2T6tb5N425dDz4NUeMGP/view" target="_blank" class="project-link" onclick="event.stopPropagation()">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Project
+                        </a>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="project-card">
+                <!-- Project 2 - Leo Internet Cafe -->
+                <div class="project-card" onclick="window.open('https://drive.google.com/file/d/1O3_OMafoT_L8n5gHE91od2uWkFd3meUT/view', '_blank')">
                     <div class="project-header">
                         <div class="project-icon">
                             <i class="fas fa-network-wired"></i>
@@ -767,11 +808,15 @@
                             <span class="project-tag">Security</span>
                             <span class="project-tag">Infrastructure</span>
                         </div>
+                        <a href="https://drive.google.com/file/d/1O3_OMafoT_L8n5gHE91od2uWkFd3meUT/view" target="_blank" class="project-link" onclick="event.stopPropagation()">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Project
+                        </a>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="project-card">
+                <!-- Project 3 - CustomerCRM -->
+                <div class="project-card" onclick="window.open('https://preview--manageo-product-keeper.lovable.app/login', '_blank')">
                     <div class="project-header">
                         <div class="project-icon">
                             <i class="fas fa-database"></i>
@@ -785,6 +830,10 @@
                             <span class="project-tag">CRUD</span>
                             <span class="project-tag">Web App</span>
                         </div>
+                        <a href="https://preview--manageo-product-keeper.lovable.app/login" target="_blank" class="project-link" onclick="event.stopPropagation()">
+                            <i class="fas fa-rocket"></i>
+                            Live Demo
+                        </a>
                     </div>
                 </div>
             </div>
